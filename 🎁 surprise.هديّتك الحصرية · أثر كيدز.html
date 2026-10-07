@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<!-- saved from url=(0276)file:///C:/Users/User/Desktop/%D8%A7%D8%AB%D8%B1%20%D9%83%D8%AF%D8%B2/%D9%84%D9%88%D9%86/1_files/%D8%AA%D8%AC%D9%85%D9%8A%D8%B9%20%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8/%D9%85%D8%AD%D8%AA%D9%88%D9%8A%D8%A7%D8%AA%20%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8/23-surprise-page%20(3).html -->
+<html lang="ar" dir="rtl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🎁 هديّتك الحصرية · أثر كيدز</title>
+<link href="./🎁 surprise.هديّتك الحصرية · أثر كيدز_files/css2" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0f0c2e;font-family:'Tajawal',sans-serif;color:#fff;min-height:100vh;overflow-x:hidden;direction:rtl;}
+body::before{content:'';position:fixed;inset:0;z-index:0;
+  background:radial-gradient(ellipse 60% 50% at 10% 10%,rgba(245,180,30,0.2) 0%,transparent 60%),
+  radial-gradient(ellipse 50% 60% at 90% 90%,rgba(99,102,241,0.25) 0%,transparent 60%),
+  linear-gradient(160deg,#0f0c2e 0%,#1a1650 50%,#0d1535 100%);pointer-events:none;}
+#stars{position:fixed;inset:0;z-index:1;pointer-events:none;}
+
+nav{position:relative;z-index:10;display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:20px 16px 10px;}
+.tab{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:100px;padding:8px 18px;font-size:13px;font-weight:700;cursor:pointer;color:rgba(255,255,255,0.75);font-family:'Tajawal',sans-serif;transition:all 0.2s;}
+.tab:hover{background:rgba(255,255,255,0.12);}
+.tab.active{background:linear-gradient(135deg,#f5c842,#f97316);color:#07111f;border-color:transparent;box-shadow:0 4px 16px rgba(245,200,66,0.35);}
+
+.sec{display:none;position:relative;z-index:2;padding:20px;max-width:800px;margin:0 auto;}
+.sec.active{display:block;}
+
+#celebOverlay{position:fixed;inset:0;z-index:999;pointer-events:none;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s;}
+#celebOverlay.show{opacity:1;pointer-events:all;}
+.cbox{background:linear-gradient(135deg,#1e1a4a,#2a2060);border:2px solid #f5c842;border-radius:24px;padding:28px 40px;text-align:center;box-shadow:0 0 60px rgba(245,200,66,0.4);transform:scale(0.8);transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);}
+#celebOverlay.show .cbox{transform:scale(1);}
+.cf{position:fixed;border-radius:2px;pointer-events:none;z-index:1000;animation:cfFall linear forwards;}
+@keyframes cfFall{0%{transform:translateY(-20px) rotate(0deg);opacity:1;}100%{transform:translateY(100vh) rotate(720deg);opacity:0;}}
+
+.card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px;margin-bottom:14px;}
+.sec-title{font-size:20px;font-weight:900;color:#f5c842;margin-bottom:6px;text-align:center;}
+.sec-en{font-size:13px;color:rgba(255,255,255,0.5);text-align:center;margin-bottom:20px;font-family:'Nunito',sans-serif;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:560px){.grid2{grid-template-columns:1fr;}}
+
+.btn-gold{display:block;width:100%;padding:13px;background:linear-gradient(135deg,#f5c842,#f97316);color:#07111f;font-weight:900;font-size:15px;border:none;border-radius:100px;cursor:pointer;font-family:'Tajawal',sans-serif;box-shadow:0 4px 16px rgba(245,200,66,0.35);transition:all 0.2s;text-align:center;}
+.btn-ghost{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:100px;padding:8px 20px;font-size:13px;font-weight:700;color:#fff;cursor:pointer;font-family:'Tajawal',sans-serif;transition:all 0.2s;}
+.btn-ghost:hover,.btn-gold:hover{opacity:0.85;transform:scale(1.01);}
+
+.palette{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:12px 0;}
+.cdot{width:32px;height:32px;border-radius:50%;cursor:pointer;border:3px solid transparent;transition:all 0.15s;}
+.cdot.sel{border-color:#fff;transform:scale(1.2);}
+
+.m-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0;}
+.mc{background:rgba(255,255,255,0.06);border:2px solid rgba(255,255,255,0.12);border-radius:12px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:clamp(22px,5vw,36px);cursor:pointer;transition:all 0.2s;user-select:none;}
+.mc.fl{background:rgba(245,200,66,0.1);border-color:#f5c842;}
+.mc.mt{background:rgba(16,185,129,0.15);border-color:#10b981;cursor:default;}
+
+.cert-input{width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:10px 14px;color:#fff;font-size:16px;font-family:'Tajawal',sans-serif;outline:none;margin-bottom:14px;}
+.cert-input:focus{border-color:#f5c842;}
+.cert-frame{background:linear-gradient(135deg,rgba(245,200,66,0.08),rgba(99,102,241,0.08));border:2px solid rgba(245,200,66,0.4);border-radius:20px;padding:30px 24px;text-align:center;margin-bottom:16px;}
+
+footer{position:relative;z-index:2;text-align:center;padding:20px;border-top:1px solid rgba(255,255,255,0.06);font-size:11px;color:rgba(255,255,255,0.25);font-family:'Nunito',sans-serif;margin-top:20px;}
+</style>
+</head>
+<body>
+
+<div id="stars"><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.1px; height: 2.1px; left: 98%; top: 82.2%; opacity: 0.57;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.9px; height: 0.9px; left: 80%; top: 46.7%; opacity: 0.18;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.2px; height: 1.2px; left: 91.2%; top: 12.1%; opacity: 0.41;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.2px; height: 2.2px; left: 26.6%; top: 19.7%; opacity: 0.64;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.9px; height: 1.9px; left: 79.6%; top: 98%; opacity: 0.12;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.6px; height: 1.6px; left: 7.6%; top: 20%; opacity: 0.31;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.3px; height: 1.3px; left: 2.9%; top: 31.3%; opacity: 0.26;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.7px; height: 0.7px; left: 72.8%; top: 7.4%; opacity: 0.38;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.7px; height: 1.7px; left: 96.5%; top: 57.2%; opacity: 0.53;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.3px; height: 1.3px; left: 95.7%; top: 37%; opacity: 0.63;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.3px; height: 2.3px; left: 22%; top: 47.9%; opacity: 0.25;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.1px; height: 2.1px; left: 20%; top: 64.1%; opacity: 0.4;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.8px; height: 0.8px; left: 69.5%; top: 43.5%; opacity: 0.15;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.8px; height: 0.8px; left: 46.5%; top: 39.2%; opacity: 0.14;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.9px; height: 1.9px; left: 33.6%; top: 53.3%; opacity: 0.26;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.8px; height: 0.8px; left: 6.2%; top: 17%; opacity: 0.2;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.7px; height: 0.7px; left: 11.4%; top: 26.2%; opacity: 0.62;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.2px; height: 1.2px; left: 0.5%; top: 97.2%; opacity: 0.47;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.9px; height: 0.9px; left: 8.6%; top: 23.8%; opacity: 0.14;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.1px; height: 2.1px; left: 20.6%; top: 25.4%; opacity: 0.24;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.5px; height: 0.5px; left: 95.2%; top: 21.3%; opacity: 0.54;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2px; height: 2px; left: 52.5%; top: 17.5%; opacity: 0.42;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.2px; height: 1.2px; left: 16.5%; top: 68%; opacity: 0.53;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.7px; height: 0.7px; left: 59.6%; top: 23%; opacity: 0.14;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.7px; height: 0.7px; left: 11.8%; top: 95.7%; opacity: 0.57;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.8px; height: 1.8px; left: 97.2%; top: 21.3%; opacity: 0.6;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.8px; height: 0.8px; left: 13.3%; top: 9.8%; opacity: 0.64;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.4px; height: 2.4px; left: 26.3%; top: 33.8%; opacity: 0.51;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.9px; height: 1.9px; left: 26.1%; top: 16.5%; opacity: 0.69;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.5px; height: 0.5px; left: 22.1%; top: 39.2%; opacity: 0.17;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.5px; height: 2.5px; left: 87%; top: 42.6%; opacity: 0.48;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.7px; height: 0.7px; left: 98.6%; top: 59.8%; opacity: 0.26;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.5px; height: 1.5px; left: 46.6%; top: 32.6%; opacity: 0.22;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.8px; height: 1.8px; left: 76.9%; top: 32.8%; opacity: 0.55;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1px; height: 1px; left: 76.2%; top: 19.5%; opacity: 0.45;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.9px; height: 0.9px; left: 63.2%; top: 27.7%; opacity: 0.62;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.3px; height: 2.3px; left: 54.4%; top: 54.2%; opacity: 0.49;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.9px; height: 1.9px; left: 4%; top: 59.4%; opacity: 0.21;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.2px; height: 2.2px; left: 7.9%; top: 94.5%; opacity: 0.52;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.5px; height: 1.5px; left: 16.3%; top: 61%; opacity: 0.63;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.2px; height: 1.2px; left: 55.4%; top: 78.6%; opacity: 0.46;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.5px; height: 2.5px; left: 98.1%; top: 34.2%; opacity: 0.58;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.4px; height: 2.4px; left: 80.5%; top: 54.3%; opacity: 0.61;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.6px; height: 1.6px; left: 81.8%; top: 83.9%; opacity: 0.55;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.6px; height: 0.6px; left: 85.5%; top: 91.4%; opacity: 0.37;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.5px; height: 1.5px; left: 70.4%; top: 19.2%; opacity: 0.19;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.7px; height: 0.7px; left: 22%; top: 76.3%; opacity: 0.54;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2px; height: 2px; left: 10%; top: 57%; opacity: 0.43;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.6px; height: 1.6px; left: 41.8%; top: 34%; opacity: 0.26;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.5px; height: 1.5px; left: 89.8%; top: 23%; opacity: 0.57;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.8px; height: 0.8px; left: 47.5%; top: 30.7%; opacity: 0.31;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.1px; height: 1.1px; left: 72.7%; top: 25.4%; opacity: 0.58;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.3px; height: 2.3px; left: 28.7%; top: 93.3%; opacity: 0.21;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.4px; height: 1.4px; left: 32.9%; top: 90.8%; opacity: 0.5;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.4px; height: 1.4px; left: 61.6%; top: 52.8%; opacity: 0.38;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.7px; height: 1.7px; left: 95.6%; top: 26%; opacity: 0.36;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.3px; height: 1.3px; left: 74.8%; top: 83.5%; opacity: 0.49;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.8px; height: 0.8px; left: 94.4%; top: 4.6%; opacity: 0.2;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.8px; height: 1.8px; left: 52.7%; top: 49.1%; opacity: 0.24;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.4px; height: 2.4px; left: 6.3%; top: 71.5%; opacity: 0.47;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.1px; height: 1.1px; left: 5.7%; top: 43.6%; opacity: 0.18;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1px; height: 1px; left: 3.2%; top: 21.8%; opacity: 0.2;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.3px; height: 1.3px; left: 18.8%; top: 63.2%; opacity: 0.68;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2px; height: 2px; left: 83.6%; top: 24.8%; opacity: 0.38;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.3px; height: 2.3px; left: 40.9%; top: 28.7%; opacity: 0.38;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.7px; height: 0.7px; left: 48.2%; top: 29.2%; opacity: 0.69;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.5px; height: 2.5px; left: 42.4%; top: 3.8%; opacity: 0.39;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1px; height: 1px; left: 57%; top: 6.4%; opacity: 0.67;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.5px; height: 2.5px; left: 78.6%; top: 83.4%; opacity: 0.56;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.2px; height: 2.2px; left: 16.8%; top: 72%; opacity: 0.35;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.8px; height: 0.8px; left: 17.8%; top: 29.2%; opacity: 0.44;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2px; height: 2px; left: 44%; top: 41.7%; opacity: 0.65;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.8px; height: 0.8px; left: 35.9%; top: 84%; opacity: 0.55;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.3px; height: 1.3px; left: 49.6%; top: 83.1%; opacity: 0.5;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.1px; height: 1.1px; left: 61.7%; top: 43.1%; opacity: 0.29;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1px; height: 1px; left: 99.7%; top: 43.3%; opacity: 0.46;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.9px; height: 1.9px; left: 58.8%; top: 60.6%; opacity: 0.34;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2px; height: 2px; left: 30.2%; top: 64.4%; opacity: 0.59;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.5px; height: 1.5px; left: 41.1%; top: 90.6%; opacity: 0.62;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.6px; height: 1.6px; left: 22.8%; top: 43.9%; opacity: 0.41;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.7px; height: 0.7px; left: 44.5%; top: 79.9%; opacity: 0.12;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.7px; height: 0.7px; left: 81.9%; top: 48.2%; opacity: 0.57;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.7px; height: 1.7px; left: 0.5%; top: 66.1%; opacity: 0.15;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.3px; height: 1.3px; left: 82.1%; top: 0.1%; opacity: 0.42;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1px; height: 1px; left: 45.6%; top: 37.3%; opacity: 0.27;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.6px; height: 0.6px; left: 69.1%; top: 49.1%; opacity: 0.61;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.9px; height: 1.9px; left: 10.8%; top: 41.5%; opacity: 0.2;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.9px; height: 1.9px; left: 75.8%; top: 85.6%; opacity: 0.3;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.3px; height: 2.3px; left: 16%; top: 22.5%; opacity: 0.36;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.6px; height: 1.6px; left: 18.6%; top: 63.5%; opacity: 0.67;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.1px; height: 2.1px; left: 90.1%; top: 27.9%; opacity: 0.42;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.2px; height: 1.2px; left: 19.4%; top: 13%; opacity: 0.63;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.9px; height: 0.9px; left: 50.4%; top: 65%; opacity: 0.14;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.5px; height: 1.5px; left: 75.8%; top: 80.8%; opacity: 0.32;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.3px; height: 2.3px; left: 32.5%; top: 29.3%; opacity: 0.31;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2px; height: 2px; left: 95.3%; top: 69%; opacity: 0.14;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.9px; height: 0.9px; left: 51.7%; top: 17.9%; opacity: 0.33;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.3px; height: 1.3px; left: 41.2%; top: 96%; opacity: 0.49;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.4px; height: 1.4px; left: 69.5%; top: 48.9%; opacity: 0.11;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1px; height: 1px; left: 96.6%; top: 15.2%; opacity: 0.18;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.7px; height: 1.7px; left: 7.8%; top: 81.6%; opacity: 0.61;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.9px; height: 0.9px; left: 85.5%; top: 23.2%; opacity: 0.17;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.4px; height: 2.4px; left: 72.7%; top: 69.3%; opacity: 0.46;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.9px; height: 0.9px; left: 71%; top: 57.1%; opacity: 0.56;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.8px; height: 1.8px; left: 64.1%; top: 17.7%; opacity: 0.41;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.1px; height: 1.1px; left: 90%; top: 41.8%; opacity: 0.33;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.3px; height: 1.3px; left: 46.7%; top: 31.5%; opacity: 0.42;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.1px; height: 1.1px; left: 66.6%; top: 31%; opacity: 0.55;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2px; height: 2px; left: 3.7%; top: 4.3%; opacity: 0.18;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.6px; height: 1.6px; left: 33.9%; top: 87.4%; opacity: 0.3;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.9px; height: 0.9px; left: 38.4%; top: 85.5%; opacity: 0.38;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.5px; height: 2.5px; left: 65.8%; top: 97.6%; opacity: 0.29;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.2px; height: 2.2px; left: 16.2%; top: 22.3%; opacity: 0.6;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.1px; height: 2.1px; left: 84.2%; top: 76.5%; opacity: 0.69;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.8px; height: 0.8px; left: 70.2%; top: 63.4%; opacity: 0.41;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.7px; height: 0.7px; left: 78.4%; top: 82.8%; opacity: 0.58;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.8px; height: 1.8px; left: 98.2%; top: 2.8%; opacity: 0.34;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.3px; height: 2.3px; left: 95.7%; top: 27.5%; opacity: 0.63;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.3px; height: 2.3px; left: 11.4%; top: 54%; opacity: 0.38;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.6px; height: 0.6px; left: 89.1%; top: 81.7%; opacity: 0.57;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.1px; height: 2.1px; left: 10.6%; top: 90.8%; opacity: 0.58;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.2px; height: 2.2px; left: 98.5%; top: 78.6%; opacity: 0.11;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.1px; height: 1.1px; left: 55.7%; top: 27.2%; opacity: 0.54;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.6px; height: 0.6px; left: 48.9%; top: 26.6%; opacity: 0.15;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.7px; height: 0.7px; left: 64.7%; top: 2.5%; opacity: 0.24;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.7px; height: 0.7px; left: 15.2%; top: 24.4%; opacity: 0.68;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.1px; height: 1.1px; left: 99.4%; top: 98.1%; opacity: 0.3;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.1px; height: 2.1px; left: 4.1%; top: 77.5%; opacity: 0.56;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.3px; height: 1.3px; left: 80%; top: 64.3%; opacity: 0.33;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.5px; height: 1.5px; left: 29.1%; top: 72.2%; opacity: 0.67;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1px; height: 1px; left: 8.2%; top: 98.9%; opacity: 0.6;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.1px; height: 2.1px; left: 26.3%; top: 64.7%; opacity: 0.39;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.8px; height: 0.8px; left: 15.3%; top: 13%; opacity: 0.61;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.2px; height: 2.2px; left: 49.7%; top: 95.7%; opacity: 0.21;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.8px; height: 1.8px; left: 97.4%; top: 50%; opacity: 0.19;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.8px; height: 1.8px; left: 39.7%; top: 6.3%; opacity: 0.19;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1px; height: 1px; left: 77.8%; top: 69.9%; opacity: 0.29;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.3px; height: 1.3px; left: 94.2%; top: 70.1%; opacity: 0.53;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.6px; height: 1.6px; left: 39.4%; top: 26.1%; opacity: 0.64;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.5px; height: 1.5px; left: 80.5%; top: 32.3%; opacity: 0.51;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.7px; height: 0.7px; left: 33.1%; top: 38.7%; opacity: 0.12;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 2.3px; height: 2.3px; left: 24%; top: 59%; opacity: 0.19;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.4px; height: 1.4px; left: 63.5%; top: 95.2%; opacity: 0.67;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.7px; height: 1.7px; left: 63.2%; top: 83.5%; opacity: 0.56;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.9px; height: 1.9px; left: 91%; top: 1.3%; opacity: 0.6;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.7px; height: 0.7px; left: 90.6%; top: 15.4%; opacity: 0.32;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.3px; height: 1.3px; left: 0.9%; top: 96.5%; opacity: 0.7;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 0.8px; height: 0.8px; left: 9.8%; top: 41.5%; opacity: 0.45;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1px; height: 1px; left: 37.9%; top: 27.8%; opacity: 0.36;"></div><div style="position: absolute; border-radius: 50%; background: rgb(255, 255, 255); width: 1.7px; height: 1.7px; left: 44.4%; top: 95.5%; opacity: 0.65;"></div></div>
+<canvas id="fwCanvas" style="position:fixed;inset:0;z-index:1;pointer-events:none;width:100%;height:100%;" width="1920" height="911"></canvas>
+
+<div id="celebOverlay" onclick="this.classList.remove('show')" class="">
+  <div class="cbox">
+    <div id="cemoji" style="font-size:52px;margin-bottom:8px;">🎉</div>
+    <div id="ctext" style="font-size:22px;font-weight:900;color:#f5c842;margin-bottom:4px;">مرحباً بك! · Welcome!</div>
+    <div id="csub" style="font-size:14px;color:rgba(255,255,255,0.7);font-family:'Nunito',sans-serif;">Your exclusive gift is here! هديّتك هنا!</div>
+  </div>
+</div>
+
+<nav>
+  <div class="tab active" onclick="showTab('surprise',this)">🎁 المفاجأة</div>
+  <div class="tab" onclick="showTab('guide',this)">🗺️ دليل الأنشطة</div>
+  <div class="tab" onclick="showTab('coloring',this)">🎨 تلوين</div>
+  <div class="tab" onclick="showTab('matching',this)">🚒 مطابقة</div>
+  <div class="tab" onclick="showTab('certificate',this)">🏆 شهادة</div>
+</nav>
+
+<!-- SURPRISE -->
+<div class="sec active" id="sec-surprise">
+  <div style="text-align:center;padding:20px 0;">
+    <div style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#f5c842,#f97316);color:#07111f;font-weight:900;font-size:13px;padding:6px 20px;border-radius:100px;margin-bottom:16px;box-shadow:0 0 24px rgba(245,200,66,0.4);">🎁 هديّتك الحصرية · Your Exclusive Gift</div>
+    <h1 style="font-size:clamp(22px,5vw,38px);font-weight:900;margin-bottom:8px;">مبروك! أكملتَ <span style="color:#f5c842;">هيا نبني مدينتنا الجميلة</span> 🎉</h1>
+    <p style="font-size:clamp(13px,2vw,18px);font-weight:700;color:rgba(255,255,255,0.7);font-family:'Nunito',sans-serif;margin-bottom:6px;">Congratulations! You finished "Let's Build Our Beautiful City"!</p>
+    <p style="font-size:13px;color:rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;">هذه هديّتك التفاعلية الحصرية · This is your exclusive interactive gift 💛</p>
+  </div>
+
+  <div class="grid2" style="margin-top:10px;">
+    <div class="card" style="text-align:center;cursor:pointer;" onclick="showTab('guide',document.querySelectorAll('.tab')[1])">
+      <div style="font-size:36px;margin-bottom:8px;">🗺️</div>
+      <div style="font-size:15px;font-weight:900;color:#f5c842;margin-bottom:4px;">دليل الأنشطة</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;margin-bottom:8px;">Activity Guide</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.75);">اكتشف ما يمكنك فعله هنا!<br><span style="font-family:'Nunito',sans-serif;color:rgba(255,255,255,0.5);">Discover what you can do here!</span></div>
+    </div>
+    <div class="card" style="text-align:center;cursor:pointer;" onclick="showTab('coloring',document.querySelectorAll('.tab')[2])">
+      <div style="font-size:36px;margin-bottom:8px;">🎨</div>
+      <div style="font-size:15px;font-weight:900;color:#f5c842;margin-bottom:4px;">تلوين رقمي</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;margin-bottom:8px;">Digital Coloring</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.75);">لوّن سيارة الإطفاء + تعلّم الألوان<br><span style="font-family:'Nunito',sans-serif;color:rgba(255,255,255,0.5);">Color the truck + learn colors</span></div>
+    </div>
+    <div class="card" style="text-align:center;cursor:pointer;" onclick="showTab('matching',document.querySelectorAll('.tab')[3])">
+      <div style="font-size:36px;margin-bottom:8px;">🚒</div>
+      <div style="font-size:15px;font-weight:900;color:#f5c842;margin-bottom:4px;">طابق المركبات</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;margin-bottom:8px;">Match the Vehicles</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.75);">اعثر على كل الأزواج المتطابقة<br><span style="font-family:'Nunito',sans-serif;color:rgba(255,255,255,0.5);">Find all matching pairs</span></div>
+    </div>
+    <div class="card" style="text-align:center;cursor:pointer;" onclick="showTab('certificate',document.querySelectorAll('.tab')[4])">
+      <div style="font-size:36px;margin-bottom:8px;">🏆</div>
+      <div style="font-size:15px;font-weight:900;color:#f5c842;margin-bottom:4px;">شهادة الإنجاز</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;margin-bottom:8px;">Achievement Certificate</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.75);">اطبع شهادتك باسمك<br><span style="font-family:'Nunito',sans-serif;color:rgba(255,255,255,0.5);">Print your personalized certificate</span></div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:16px;padding:16px;background:rgba(245,200,66,0.08);border:1px solid rgba(245,200,66,0.25);border-radius:14px;">
+    <div style="font-size:15px;font-weight:700;color:#f5c842;margin-bottom:4px;">لأن كل طفل يحمل في داخله أثراً يريد أن يكتشفه 💛</div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.4);font-family:'Nunito',sans-serif;">Every child carries within them an impact they want to discover</div>
+  </div>
+</div>
+
+<!-- GUIDE -->
+<div class="sec" id="sec-guide">
+  <div class="sec-title">🗺️ دليل الأنشطة التفاعلية</div>
+  <div class="sec-en">Your Interactive Activity Guide — How to use each activity</div>
+
+  <div class="card">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+      <div style="font-size:32px;">🎨</div>
+      <div>
+        <div style="font-size:16px;font-weight:900;color:#f5c842;">تلوين رقمي · Digital Coloring</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;">Interactive painting on screen</div>
+      </div>
+    </div>
+    <div style="font-size:13px;color:rgba(255,255,255,0.8);line-height:1.9;">
+      ① اختر لوناً من لوحة الألوان<br>
+      <span style="font-family:'Nunito',sans-serif;color:rgba(255,255,255,0.5);">① Choose a color from the palette</span><br>
+      ② اضغط على أي جزء من سيارة الإطفاء لتلوينه<br>
+      <span style="font-family:'Nunito',sans-serif;color:rgba(255,255,255,0.5);">② Tap any part of the fire truck to color it</span><br>
+      ③ أدوّر عجلة الألوان لاختيار لون عشوائي وتعلّم معلومة عنه<br>
+      <span style="font-family:'Nunito',sans-serif;color:rgba(255,255,255,0.5);">③ Spin the color wheel for a random color &amp; learn a fun fact</span><br>
+      ④ احفظ لوحتك كصورة على جهازك<br>
+      <span style="font-family:'Nunito',sans-serif;color:rgba(255,255,255,0.5);">④ Save your painting as an image on your device</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+      <div style="font-size:32px;">🚒</div>
+      <div>
+        <div style="font-size:16px;font-weight:900;color:#f5c842;">طابق المركبات · Vehicle Matching</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;">Memory matching game</div>
+      </div>
+    </div>
+    <div style="font-size:13px;color:rgba(255,255,255,0.8);line-height:1.9;">
+      ① ١٦ بطاقة مقلوبة — كل مركبة لها زوج مخفي<br>
+      <span style="font-family:'Nunito',sans-serif;color:rgba(255,255,255,0.5);">① 16 face-down cards — each vehicle has a hidden pair</span><br>
+      ② اضغط بطاقتين لتكشفهما — إذا تطابقتا بقيتا مكشوفتين<br>
+      <span style="font-family:'Nunito',sans-serif;color:rgba(255,255,255,0.5);">② Flip two cards — if they match, they stay revealed</span><br>
+      ③ حاول أن تجد كل الأزواج بأقل عدد من المحاولات<br>
+      <span style="font-family:'Nunito',sans-serif;color:rgba(255,255,255,0.5);">③ Try to find all pairs in as few attempts as possible</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+      <div style="font-size:32px;">🏆</div>
+      <div>
+        <div style="font-size:16px;font-weight:900;color:#f5c842;">شهادة الإنجاز · Achievement Certificate</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;">Your personalized certificate</div>
+      </div>
+    </div>
+    <div style="font-size:13px;color:rgba(255,255,255,0.8);line-height:1.9;">
+      ① اكتب اسمك في الخانة<br>
+      <span style="font-family:'Nunito',sans-serif;color:rgba(255,255,255,0.5);">① Type your name in the box</span><br>
+      ② شاهد الشهادة تتحدث باسمك فوراً<br>
+      <span style="font-family:'Nunito',sans-serif;color:rgba(255,255,255,0.5);">② Watch the certificate update with your name instantly</span><br>
+      ③ اضغط "اطبع شهادتك" واحفظها أو اطبعها وعلّقها في غرفتك!<br>
+      <span style="font-family:'Nunito',sans-serif;color:rgba(255,255,255,0.5);">③ Press "Print" — save or print it and hang it in your room!</span>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:8px;">
+    <button class="btn-gold" style="max-width:300px;margin:0 auto;" onclick="showTab('coloring',document.querySelectorAll('.tab')[2])">🎨 ابدأ التلوين الآن! · Start Coloring!</button>
+  </div>
+</div>
+
+<!-- COLORING -->
+<div class="sec" id="sec-coloring">
+  <div class="sec-title">🎨 تلوين رقمي · Digital Coloring</div>
+  <div class="sec-en">Tap a color then tap the fire truck to color it!</div>
+
+  <div class="card">
+    <div style="font-size:13px;font-weight:700;color:#f5c842;margin-bottom:8px;">اختر لونك · Choose your color:</div>
+    <div class="palette" id="palette"><div class="cdot sel" title="أحمر · Red" style="background: rgb(239, 68, 68); border: 3px solid transparent;"></div><div class="cdot" title="برتقالي · Orange" style="background: rgb(249, 115, 22); border: 3px solid transparent;"></div><div class="cdot" title="أصفر · Yellow" style="background: rgb(245, 200, 66); border: 3px solid transparent;"></div><div class="cdot" title="أخضر فاتح · Light Green" style="background: rgb(132, 204, 22); border: 3px solid transparent;"></div><div class="cdot" title="أخضر · Green" style="background: rgb(16, 185, 129); border: 3px solid transparent;"></div><div class="cdot" title="سماوي · Cyan" style="background: rgb(6, 182, 212); border: 3px solid transparent;"></div><div class="cdot" title="أزرق · Blue" style="background: rgb(59, 130, 246); border: 3px solid transparent;"></div><div class="cdot" title="بنفسجي · Purple" style="background: rgb(139, 92, 246); border: 3px solid transparent;"></div><div class="cdot" title="وردي · Pink" style="background: rgb(236, 72, 153); border: 3px solid transparent;"></div><div class="cdot" title="ذهبي · Golden" style="background: rgb(234, 179, 8); border: 3px solid transparent;"></div><div class="cdot" title="أبيض · White" style="background: rgb(255, 255, 255); border: 3px solid rgb(204, 204, 204);"></div><div class="cdot" title="رمادي · Gray" style="background: rgb(55, 65, 81); border: 3px solid transparent;"></div></div>
+    <div style="background:#f8f6f0;border-radius:12px;overflow:hidden;text-align:center;padding:8px;">
+      <canvas id="cc" width="500" height="340" style="max-width:100%;cursor:crosshair;display:block;margin:0 auto;"></canvas>
+    </div>
+    <div style="display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap;">
+      <button class="btn-ghost" onclick="clearCanvas()">🗑️ مسح · Clear</button>
+      <button class="btn-gold" style="width:auto;display:inline-block;padding:8px 24px;" onclick="saveCanvas()">⬇️ احفظ · Save</button>
+    </div>
+  </div>
+
+  <!-- COLOR WHEEL -->
+  <div class="card">
+    <div style="font-size:15px;font-weight:900;color:#f5c842;margin-bottom:4px;">🎡 عجلة الألوان · Color Wheel</div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;margin-bottom:14px;">أدوّر العجلة واكتشف لوناً عشوائياً مع معلومة ممتعة! · Spin for a random color and a fun fact!</div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:center;">
+      <div style="position:relative;width:180px;height:180px;flex-shrink:0;">
+        <canvas id="wc" width="180" height="180" style="border-radius:50%;display:block;"></canvas>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid #333;z-index:2;pointer-events:none;box-shadow:0 2px 6px rgba(0,0,0,0.4);"></div>
+      </div>
+      <div style="flex:1;min-width:160px;text-align:center;">
+        <div id="wColor" style="width:64px;height:64px;border-radius:50%;margin:0 auto 10px;background:#f5c842;border:3px solid rgba(255,255,255,0.2);transition:background 0.4s;"></div>
+        <div id="wName" style="font-size:20px;font-weight:900;color:#f5c842;margin-bottom:2px;">ذهبي</div>
+        <div id="wEn" style="font-size:13px;color:rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;margin-bottom:8px;">Golden</div>
+        <div id="wFact" style="font-size:11px;color:rgba(255,255,255,0.6);font-style:italic;margin-bottom:12px;min-height:30px;font-family:'Nunito',sans-serif;">الذهبي لون النجوم والكنز! · Golden is the color of stars!</div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <button id="spinBtn" onclick="doSpinWheel()" class="btn-gold" style="display:inline-block;padding:9px 20px;font-size:13px;">🎡 أدوّر! · Spin!</button>
+          <button onclick="useWheelColor()" class="btn-ghost" style="font-size:12px;">🎨 استخدم هذا اللون · Use this color</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLOR LEARNING GRID -->
+    <div style="border-top:1px solid rgba(255,255,255,0.08);margin-top:14px;padding-top:12px;">
+      <div style="font-size:13px;font-weight:700;color:#f5c842;margin-bottom:10px;text-align:center;">🌈 تعلّم الألوان · Learn Colors — اضغط أي لون لاختياره · Tap any color to select it</div>
+      <div id="colorGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:8px;"><div style="text-align: center; cursor: pointer; padding: 8px 4px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); transition: 0.2s;"><div style="width:36px;height:36px;border-radius:50%;background:#ef4444;margin:0 auto 5px;border:2px solid rgba(255,255,255,0.2);"></div><div style="font-size:10px;font-weight:700;color:#f5c842;line-height:1.3;">أحمر</div><div style="font-size:9px;color:rgba(255,255,255,0.45);font-family:Nunito,sans-serif;">Red</div></div><div style="text-align: center; cursor: pointer; padding: 8px 4px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); transition: 0.2s;"><div style="width:36px;height:36px;border-radius:50%;background:#f97316;margin:0 auto 5px;border:2px solid rgba(255,255,255,0.2);"></div><div style="font-size:10px;font-weight:700;color:#f5c842;line-height:1.3;">برتقالي</div><div style="font-size:9px;color:rgba(255,255,255,0.45);font-family:Nunito,sans-serif;">Orange</div></div><div style="text-align: center; cursor: pointer; padding: 8px 4px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); transition: 0.2s;"><div style="width:36px;height:36px;border-radius:50%;background:#f5c842;margin:0 auto 5px;border:2px solid rgba(255,255,255,0.2);"></div><div style="font-size:10px;font-weight:700;color:#f5c842;line-height:1.3;">أصفر</div><div style="font-size:9px;color:rgba(255,255,255,0.45);font-family:Nunito,sans-serif;">Yellow</div></div><div style="text-align: center; cursor: pointer; padding: 8px 4px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); transition: 0.2s;"><div style="width:36px;height:36px;border-radius:50%;background:#84cc16;margin:0 auto 5px;border:2px solid rgba(255,255,255,0.2);"></div><div style="font-size:10px;font-weight:700;color:#f5c842;line-height:1.3;">أخضر فاتح</div><div style="font-size:9px;color:rgba(255,255,255,0.45);font-family:Nunito,sans-serif;">Light Green</div></div><div style="text-align: center; cursor: pointer; padding: 8px 4px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); transition: 0.2s;"><div style="width:36px;height:36px;border-radius:50%;background:#10b981;margin:0 auto 5px;border:2px solid rgba(255,255,255,0.2);"></div><div style="font-size:10px;font-weight:700;color:#f5c842;line-height:1.3;">أخضر</div><div style="font-size:9px;color:rgba(255,255,255,0.45);font-family:Nunito,sans-serif;">Green</div></div><div style="text-align: center; cursor: pointer; padding: 8px 4px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); transition: 0.2s;"><div style="width:36px;height:36px;border-radius:50%;background:#06b6d4;margin:0 auto 5px;border:2px solid rgba(255,255,255,0.2);"></div><div style="font-size:10px;font-weight:700;color:#f5c842;line-height:1.3;">سماوي</div><div style="font-size:9px;color:rgba(255,255,255,0.45);font-family:Nunito,sans-serif;">Cyan</div></div><div style="text-align: center; cursor: pointer; padding: 8px 4px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); transition: 0.2s;"><div style="width:36px;height:36px;border-radius:50%;background:#3b82f6;margin:0 auto 5px;border:2px solid rgba(255,255,255,0.2);"></div><div style="font-size:10px;font-weight:700;color:#f5c842;line-height:1.3;">أزرق</div><div style="font-size:9px;color:rgba(255,255,255,0.45);font-family:Nunito,sans-serif;">Blue</div></div><div style="text-align: center; cursor: pointer; padding: 8px 4px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); transition: 0.2s;"><div style="width:36px;height:36px;border-radius:50%;background:#8b5cf6;margin:0 auto 5px;border:2px solid rgba(255,255,255,0.2);"></div><div style="font-size:10px;font-weight:700;color:#f5c842;line-height:1.3;">بنفسجي</div><div style="font-size:9px;color:rgba(255,255,255,0.45);font-family:Nunito,sans-serif;">Purple</div></div><div style="text-align: center; cursor: pointer; padding: 8px 4px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); transition: 0.2s;"><div style="width:36px;height:36px;border-radius:50%;background:#ec4899;margin:0 auto 5px;border:2px solid rgba(255,255,255,0.2);"></div><div style="font-size:10px;font-weight:700;color:#f5c842;line-height:1.3;">وردي</div><div style="font-size:9px;color:rgba(255,255,255,0.45);font-family:Nunito,sans-serif;">Pink</div></div><div style="text-align: center; cursor: pointer; padding: 8px 4px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); transition: 0.2s;"><div style="width:36px;height:36px;border-radius:50%;background:#eab308;margin:0 auto 5px;border:2px solid rgba(255,255,255,0.2);"></div><div style="font-size:10px;font-weight:700;color:#f5c842;line-height:1.3;">ذهبي</div><div style="font-size:9px;color:rgba(255,255,255,0.45);font-family:Nunito,sans-serif;">Golden</div></div><div style="text-align: center; cursor: pointer; padding: 8px 4px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); transition: 0.2s;"><div style="width:36px;height:36px;border-radius:50%;background:#ffffff;margin:0 auto 5px;border:2px solid rgba(255,255,255,0.2);"></div><div style="font-size:10px;font-weight:700;color:#f5c842;line-height:1.3;">أبيض</div><div style="font-size:9px;color:rgba(255,255,255,0.45);font-family:Nunito,sans-serif;">White</div></div><div style="text-align: center; cursor: pointer; padding: 8px 4px; border-radius: 10px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); transition: 0.2s;"><div style="width:36px;height:36px;border-radius:50%;background:#374151;margin:0 auto 5px;border:2px solid rgba(255,255,255,0.2);"></div><div style="font-size:10px;font-weight:700;color:#f5c842;line-height:1.3;">رمادي</div><div style="font-size:9px;color:rgba(255,255,255,0.45);font-family:Nunito,sans-serif;">Gray</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- MATCHING -->
+<div class="sec" id="sec-matching">
+  <div class="sec-title">🚒 طابق المركبات! · Match the Vehicles!</div>
+  <div class="sec-en">Find all matching pairs · اعثر على كل الأزواج</div>
+  <div id="mScore" style="text-align:center;font-size:14px;color:#f5c842;font-weight:700;margin:10px 0;font-family:'Nunito',sans-serif;">النقاط: 0 · Score: 0 | المحاولات: 1 · Attempts: 1</div>
+  <div class="m-grid" id="mGrid"><div class="mc" data-em="🍦"></div><div class="mc" data-em="🏗️"></div><div class="mc" data-em="🚌"></div><div class="mc" data-em="🚔"></div><div class="mc" data-em="🍦"></div><div class="mc" data-em="🚕"></div><div class="mc" data-em="🚑"></div><div class="mc" data-em="🏗️"></div><div class="mc" data-em="🚚"></div><div class="mc" data-em="🚒"></div><div class="mc" data-em="🚑"></div><div class="mc" data-em="🚌"></div><div class="mc" data-em="🚚"></div><div class="mc" data-em="🚕"></div><div class="mc" data-em="🚔"></div><div class="mc" data-em="🚒"></div></div>
+  <button onclick="startMatching()" class="btn-gold">🔄 لعبة جديدة · New Game</button>
+</div>
+
+<!-- CERTIFICATE -->
+<div class="sec" id="sec-certificate">
+  <div class="sec-title">🏆 شهادة إنجازك · Your Certificate</div>
+  <div class="sec-en">Type your name and print your personalized certificate!</div>
+
+  <div class="card">
+    <label style="display:block;font-size:13px;color:rgba(255,255,255,0.7);margin-bottom:8px;font-weight:700;">✏️ اكتب اسمك · Enter your name:</label>
+    <input class="cert-input" id="childName" placeholder="اسم باني المدينة · City Builder's name..." oninput="updateCert()" maxlength="30">
+  </div>
+
+  <div class="cert-frame">
+    <div style="font-size:48px;margin-bottom:10px;">🏆</div>
+    <div style="font-size:26px;font-weight:900;color:#f5c842;margin-bottom:4px;">شهادة إنجاز</div>
+    <div style="font-size:14px;color:rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;margin-bottom:16px;">Certificate of Achievement</div>
+    <div style="width:200px;height:2px;background:linear-gradient(90deg,transparent,#f5c842,transparent);margin:0 auto 16px;"></div>
+    <div id="certName" style="font-size:28px;font-weight:900;color:#fff;margin-bottom:10px;min-height:40px;">باني المدينة</div>
+    <div style="font-size:13px;color:rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;margin-bottom:16px;line-height:1.8;">
+      هيا نبني مدينتنا الجميلة · إصدار المركبات<br>
+      Let's Build Our Beautiful City · Vehicle Edition
+    </div>
+    <div style="font-size:22px;letter-spacing:6px;color:#f5c842;margin-bottom:16px;">★ ★ ★ ★ ★</div>
+    <div style="font-size:13px;font-weight:700;color:#f5c842;">أثر كيدز | Athar Kids 💛 · © 2026</div>
+  </div>
+  <button class="btn-gold" onclick="doPrintCert()">🖨️ اطبع شهادتك · Print Your Certificate</button>
+</div>
+
+<footer>أثر كيدز | Athar Kids · © 2026 · هيا نبني مدينتنا الجميلة 🏙️</footer>
+
+<script>
+// STARS
+(function(){
+  var el=document.getElementById('stars');
+  for(var i=0;i<150;i++){
+    var s=document.createElement('div');
+    var sz=(Math.random()*2+0.5).toFixed(1);
+    s.style.cssText='position:absolute;border-radius:50%;background:#fff;width:'+sz+'px;height:'+sz+'px;left:'+(Math.random()*100).toFixed(1)+'%;top:'+(Math.random()*100).toFixed(1)+'%;opacity:'+(Math.random()*0.6+0.1).toFixed(2)+';';
+    el.appendChild(s);
+  }
+})();
+
+// FIREWORKS
+(function(){
+  var canvas = document.getElementById('fwCanvas');
+  if(!canvas) return;
+  var ctx2 = canvas.getContext('2d');
+  var W, H, particles = [], active = false;
+  
+  function resize(){
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var fwColors = ['#f5c842','#f97316','#ef4444','#10b981','#3b82f6','#8b5cf6','#ec4899','#fff','#06b6d4'];
+
+  function burst(x, y){
+    var count = 60 + Math.floor(Math.random()*40);
+    for(var i=0; i<count; i++){
+      var angle = (Math.PI*2/count)*i;
+      var speed = Math.random()*6+2;
+      particles.push({
+        x:x, y:y,
+        vx: Math.cos(angle)*speed,
+        vy: Math.sin(angle)*speed,
+        color: fwColors[Math.floor(Math.random()*fwColors.length)],
+        life: 1,
+        decay: Math.random()*0.02+0.015,
+        size: Math.random()*3+1.5
+      });
+    }
+  }
+
+  function launchFireworks(count){
+    active = true;
+    var launched = 0;
+    function launch(){
+      if(launched >= count){ 
+        setTimeout(function(){ active = false; }, 2000);
+        return;
+      }
+      burst(
+        W*0.2 + Math.random()*W*0.6,
+        H*0.1 + Math.random()*H*0.5
+      );
+      launched++;
+      setTimeout(launch, 200 + Math.random()*300);
+    }
+    launch();
+  }
+
+  function animate(){
+    requestAnimationFrame(animate);
+    if(!active && particles.length === 0) return;
+    ctx2.clearRect(0,0,W,H);
+    for(var i=particles.length-1; i>=0; i--){
+      var p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.08;
+      p.vx *= 0.98;
+      p.life -= p.decay;
+      if(p.life <= 0){ particles.splice(i,1); continue; }
+      ctx2.save();
+      ctx2.globalAlpha = p.life;
+      ctx2.fillStyle = p.color;
+      ctx2.shadowBlur = 6;
+      ctx2.shadowColor = p.color;
+      ctx2.beginPath();
+      ctx2.arc(p.x, p.y, p.size, 0, Math.PI*2);
+      ctx2.fill();
+      ctx2.restore();
+    }
+  }
+  animate();
+
+  window.launchFireworks = launchFireworks;
+})();
+
+// AUTO CELEBRATION ON LOAD
+window.addEventListener('load', function(){
+  setTimeout(function(){
+    celebrate('🎉', 'مرحباً بك! · Welcome!', 'Your exclusive gift is here! هديّتك هنا!');
+    if(window.launchFireworks) launchFireworks(8);
+  }, 800);
+});
+
+// TABS
+function showTab(name,el){
+  document.querySelectorAll('.sec').forEach(function(s){s.classList.remove('active');});
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
+  document.getElementById('sec-'+name).classList.add('active');
+  if(el) el.classList.add('active');
+}
+
+// CELEBRATE
+var cfColors=['#f5c842','#f97316','#ef4444','#10b981','#3b82f6','#8b5cf6','#ec4899','#fff'];
+function celebrate(emoji,ar,en){
+  document.getElementById('cemoji').textContent=emoji;
+  document.getElementById('ctext').textContent=ar;
+  document.getElementById('csub').textContent=en;
+  document.getElementById('celebOverlay').classList.add('show');
+  if(window.launchFireworks) launchFireworks(5);
+  for(var i=0;i<60;i++){
+    (function(i){setTimeout(function(){
+      var c=document.createElement('div');
+      c.className='cf';
+      var sz=Math.random()*10+5;
+      c.style.cssText='left:'+(Math.random()*100)+'%;top:-20px;background:'+cfColors[Math.floor(Math.random()*cfColors.length)]+';width:'+sz+'px;height:'+sz+'px;border-radius:'+(Math.random()>0.5?'50%':'2px')+';animation-duration:'+(Math.random()*2+1.5)+'s;animation-delay:'+(Math.random()*0.3)+'s;';
+      document.body.appendChild(c);
+      setTimeout(function(){if(c.parentNode)c.parentNode.removeChild(c);},3500);
+    },i*30);})(i);
+  }
+  setTimeout(function(){document.getElementById('celebOverlay').classList.remove('show');},3000);
+}
+
+// COLOR DATA
+var COLORS=[
+  {h:'#ef4444',ar:'أحمر',en:'Red',fact:'اللون الأحمر لون سيارة الإطفاء! · Red is the color of fire trucks!'},
+  {h:'#f97316',ar:'برتقالي',en:'Orange',fact:'البرتقالي مزيج من الأحمر والأصفر! · Orange = red + yellow!'},
+  {h:'#f5c842',ar:'أصفر',en:'Yellow',fact:'الأصفر لون الشمس المشرقة! · Yellow is the color of the bright sun!'},
+  {h:'#84cc16',ar:'أخضر فاتح',en:'Light Green',fact:'الأخضر الفاتح لون براعم الربيع! · Light green = color of spring buds!'},
+  {h:'#10b981',ar:'أخضر',en:'Green',fact:'الأخضر لون الأشجار والطبيعة! · Green is the color of trees!'},
+  {h:'#06b6d4',ar:'سماوي',en:'Cyan',fact:'السماوي مزيج من الأزرق والأخضر! · Cyan = blue + green!'},
+  {h:'#3b82f6',ar:'أزرق',en:'Blue',fact:'الأزرق لون السماء والبحر! · Blue is the color of sky and sea!'},
+  {h:'#8b5cf6',ar:'بنفسجي',en:'Purple',fact:'البنفسجي مزيج من الأحمر والأزرق! · Purple = red + blue!'},
+  {h:'#ec4899',ar:'وردي',en:'Pink',fact:'الوردي مزيج من الأحمر والأبيض! · Pink = red + white!'},
+  {h:'#eab308',ar:'ذهبي',en:'Golden',fact:'الذهبي لون النجوم والكنز! · Golden is the color of stars!'},
+  {h:'#ffffff',ar:'أبيض',en:'White',fact:'الأبيض يحتوي على كل الألوان! · White contains all colors!'},
+  {h:'#374151',ar:'رمادي',en:'Gray',fact:'الرمادي مزيج من الأبيض والأسود! · Gray = white + black!'},
+];
+
+// BUILD COLOR PALETTE
+var selColor='#ef4444';
+var palEl=document.getElementById('palette');
+COLORS.forEach(function(c,i){
+  var d=document.createElement('div');
+  d.className='cdot'+(i===0?' sel':'');
+  d.style.background=c.h;
+  d.style.border=c.h==='#ffffff'?'3px solid #ccc':'3px solid transparent';
+  d.title=c.ar+' · '+c.en;
+  d.onclick=function(){
+    document.querySelectorAll('.cdot').forEach(function(b){b.classList.remove('sel');b.style.border=b.style.background==='rgb(255, 255, 255)'?'3px solid #ccc':'3px solid transparent';});
+    d.classList.add('sel');
+    d.style.border='3px solid #fff';
+    selColor=c.h;
+  };
+  palEl.appendChild(d);
+});
+
+// BUILD COLOR LEARNING GRID
+var gridEl=document.getElementById('colorGrid');
+COLORS.forEach(function(c){
+  var d=document.createElement('div');
+  d.style.cssText='text-align:center;cursor:pointer;padding:8px 4px;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);transition:all 0.2s;';
+  d.innerHTML='<div style="width:36px;height:36px;border-radius:50%;background:'+c.h+';margin:0 auto 5px;border:2px solid rgba(255,255,255,0.2);"></div>'+
+    '<div style="font-size:10px;font-weight:700;color:#f5c842;line-height:1.3;">'+c.ar+'</div>'+
+    '<div style="font-size:9px;color:rgba(255,255,255,0.45);font-family:Nunito,sans-serif;">'+c.en+'</div>';
+  d.onmouseover=function(){this.style.background='rgba(255,255,255,0.1)';};
+  d.onmouseout=function(){this.style.background='rgba(255,255,255,0.05)';};
+  d.onclick=function(){
+    selColor=c.h;
+    document.querySelectorAll('.cdot').forEach(function(b){b.classList.remove('sel');b.style.border='3px solid transparent';});
+    currentWheelColor=c.h;
+    document.getElementById('wColor').style.background=c.h;
+    document.getElementById('wName').textContent=c.ar;
+    document.getElementById('wEn').textContent=c.en;
+    document.getElementById('wFact').textContent=c.fact;
+    celebrate('🎨','اخترت '+c.ar+'!','You chose '+c.en+'!');
+  };
+  gridEl.appendChild(d);
+});
+
+// DRAW FIRE TRUCK
+var cc=document.getElementById('cc');
+var ctx=cc.getContext('2d');
+function drawTruck(){
+  ctx.clearRect(0,0,500,340);
+  ctx.fillStyle='#f8f6f0';ctx.fillRect(0,0,500,340);
+  ctx.strokeStyle='#1e293b';ctx.lineWidth=2.5;ctx.lineCap='round';ctx.lineJoin='round';
+  ctx.beginPath();ctx.roundRect(60,110,340,140,10);ctx.fillStyle='#fff';ctx.fill();ctx.stroke();
+  ctx.beginPath();ctx.roundRect(300,70,120,140,8);ctx.fillStyle='#fff';ctx.fill();ctx.stroke();
+  ctx.beginPath();ctx.roundRect(315,80,90,60,6);ctx.fillStyle='#e0f2fe';ctx.fill();ctx.stroke();
+  ctx.beginPath();ctx.rect(70,90,240,20);ctx.fillStyle='#fff';ctx.fill();ctx.stroke();
+  for(var i=0;i<8;i++){ctx.beginPath();ctx.moveTo(90+i*28,90);ctx.lineTo(90+i*28,110);ctx.stroke();}
+  ctx.beginPath();ctx.roundRect(320,140,35,30,4);ctx.fillStyle='#e0f2fe';ctx.fill();ctx.stroke();
+  ctx.beginPath();ctx.roundRect(365,140,35,30,4);ctx.fillStyle='#e0f2fe';ctx.fill();ctx.stroke();
+  ctx.beginPath();ctx.roundRect(200,130,85,100,6);ctx.fillStyle='#fff';ctx.fill();ctx.stroke();
+  ctx.beginPath();ctx.arc(274,180,4,0,Math.PI*2);ctx.fillStyle='#1e293b';ctx.fill();
+  ctx.beginPath();ctx.arc(125,170,25,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();ctx.stroke();
+  ctx.beginPath();ctx.arc(125,170,12,0,Math.PI*2);ctx.stroke();
+  [[110,250],[200,250],[340,250],[420,250]].forEach(function(w){
+    ctx.beginPath();ctx.arc(w[0],w[1],36,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();ctx.stroke();
+    ctx.beginPath();ctx.arc(w[0],w[1],20,0,Math.PI*2);ctx.stroke();
+    ctx.beginPath();ctx.arc(w[0],w[1],7,0,Math.PI*2);ctx.fillStyle='#1e293b';ctx.fill();
+  });
+  [[300,68],[355,68],[390,68]].forEach(function(l){
+    ctx.beginPath();ctx.arc(l[0],l[1],7,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();ctx.stroke();
+  });
+  ctx.beginPath();ctx.moveTo(60,140);ctx.lineTo(32,122);ctx.lineTo(32,136);ctx.lineTo(60,150);
+  ctx.fillStyle='#fff';ctx.fill();ctx.stroke();
+  ctx.font='bold 12px Tajawal,sans-serif';ctx.fillStyle='rgba(30,41,59,0.3)';ctx.textAlign='center';
+  ctx.fillText('اضغط لتلوين · Tap to color',250,328);
+}
+drawTruck();
+
+function hexRgb(hex){return [parseInt(hex.slice(1,3),16),parseInt(hex.slice(3,5),16),parseInt(hex.slice(5,7),16)];}
+function floodFill(sx,sy,fillHex){
+  var img=ctx.getImageData(0,0,500,340),d=img.data;
+  var i=(sy*500+sx)*4,tR=d[i],tG=d[i+1],tB=d[i+2];
+  var rgb=hexRgb(fillHex);
+  if(tR===rgb[0]&&tG===rgb[1]&&tB===rgb[2])return;
+  if(tR<50&&tG<50&&tB<50)return;
+  var stack=[[sx,sy]],seen={};
+  while(stack.length){
+    var p=stack.pop(),x=p[0],y=p[1];
+    if(x<0||x>=500||y<0||y>=340)continue;
+    var k=x+','+y;if(seen[k])continue;seen[k]=1;
+    var ii=(y*500+x)*4;
+    if(Math.abs(d[ii]-tR)+Math.abs(d[ii+1]-tG)+Math.abs(d[ii+2]-tB)>80)continue;
+    d[ii]=rgb[0];d[ii+1]=rgb[1];d[ii+2]=rgb[2];d[ii+3]=255;
+    stack.push([x+1,y],[x-1,y],[x,y+1],[x,y-1]);
+  }
+  ctx.putImageData(img,0,0);
+}
+cc.addEventListener('click',function(e){
+  var r=cc.getBoundingClientRect();
+  var x=Math.floor((e.clientX-r.left)*500/r.width);
+  var y=Math.floor((e.clientY-r.top)*340/r.height);
+  floodFill(x,y,selColor);
+});
+function clearCanvas(){drawTruck();}
+function saveCanvas(){
+  var a=document.createElement('a');a.download='athar-kids-coloring.png';a.href=cc.toDataURL();a.click();
+  celebrate('🎨','لوحتك رائعة! · Your artwork is amazing!','Well done artist! فنان رائع!');
+}
+
+// WHEEL
+var wc=document.getElementById('wc');
+var wctx=wc.getContext('2d');
+var wAngle=0,wSpinning=false,currentWheelColor='#f5c842';
+function drawWheel(rot){
+  var cx=90,cy=90,r=82,sl=Math.PI*2/COLORS.length;
+  wctx.clearRect(0,0,180,180);
+  COLORS.forEach(function(c,i){
+    var s=rot+i*sl,e=s+sl;
+    wctx.beginPath();wctx.moveTo(cx,cy);wctx.arc(cx,cy,r,s,e);wctx.closePath();
+    wctx.fillStyle=c.h;wctx.fill();
+    wctx.strokeStyle='rgba(255,255,255,0.3)';wctx.lineWidth=1.5;wctx.stroke();
+  });
+  wctx.beginPath();wctx.arc(cx,cy,16,0,Math.PI*2);wctx.fillStyle='#0f0c2e';wctx.fill();
+}
+drawWheel(0);
+function doSpinWheel(){
+  if(wSpinning)return;
+  wSpinning=true;
+  document.getElementById('spinBtn').disabled=true;
+  var total=Math.PI*2*(5+Math.random()*5),dur=3000,t0=performance.now(),a0=wAngle;
+  function anim(now){
+    var p=Math.min((now-t0)/dur,1),e=1-Math.pow(1-p,4);
+    wAngle=a0+total*e;drawWheel(wAngle);
+    if(p<1){requestAnimationFrame(anim);}
+    else{
+      wSpinning=false;document.getElementById('spinBtn').disabled=false;
+      var sl=Math.PI*2/COLORS.length;
+      var n=(((-wAngle%(Math.PI*2))+(Math.PI*2))%(Math.PI*2));
+      var idx=Math.floor(n/sl)%COLORS.length;
+      var sel=COLORS[idx];
+      currentWheelColor=sel.h;
+      document.getElementById('wColor').style.background=sel.h;
+      document.getElementById('wName').textContent=sel.ar;
+      document.getElementById('wEn').textContent=sel.en;
+      document.getElementById('wFact').textContent=sel.fact;
+      celebrate('🎡','لونك: '+sel.ar+'!','Your color: '+sel.en+'!');
+    }
+  }
+  requestAnimationFrame(anim);
+}
+function useWheelColor(){
+  selColor=currentWheelColor;
+  document.querySelectorAll('.cdot').forEach(function(b){b.classList.remove('sel');b.style.border='3px solid transparent';});
+  celebrate('🎨','جاهز للتلوين! · Ready to color!','Use it now on the fire truck!');
+}
+
+// MATCHING
+var MV=['🚒','🚔','🚌','🚑','🏗️','🚕','🚚','🍦'];
+var mF=[],mM=[],mA=0,mS=0,mC=true;
+function updScore(){document.getElementById('mScore').textContent='النقاط: '+mS+' · Score: '+mS+' | المحاولات: '+mA+' · Attempts: '+mA;}
+function startMatching(){
+  var cards=MV.concat(MV).sort(function(){return Math.random()-0.5;});
+  mF=[];mM=[];mA=0;mS=0;mC=true;updScore();
+  var g=document.getElementById('mGrid');g.innerHTML='';
+  cards.forEach(function(em){
+    var c=document.createElement('div');c.className='mc';c.dataset.em=em;
+    c.onclick=function(){
+      if(!mC||c.dataset.fl||c.dataset.mt)return;
+      c.dataset.fl='1';c.textContent=em;c.classList.add('fl');mF.push(c);
+      if(mF.length===2){
+        mA++;mC=false;
+        if(mF[0].dataset.em===mF[1].dataset.em){
+          mS+=10;
+          mF.forEach(function(x){x.dataset.mt='1';x.classList.remove('fl');x.classList.add('mt');mM.push(x);});
+          mF=[];mC=true;updScore();
+          if(mM.length===MV.length*2){setTimeout(function(){celebrate('🏆','أكملت اللعبة! '+mS+' نقطة','Game complete! '+mS+' points!');},200);}
+          else{celebrate('✅','زوج صحيح! · Correct pair!','Keep going! استمر!');}
+        } else {
+          updScore();
+          setTimeout(function(){mF.forEach(function(x){delete x.dataset.fl;x.textContent='';x.classList.remove('fl');});mF=[];mC=true;},900);
+        }
+      }
+    };
+    g.appendChild(c);
+  });
+}
+startMatching();
+
+// CERTIFICATE
+function updateCert(){
+  var n=document.getElementById('childName').value.trim();
+  document.getElementById('certName').textContent=n||'باني المدينة';
+}
+function doPrintCert(){
+  var name=document.getElementById('childName').value.trim()||'باني المدينة';
+  var w=window.open('','_blank');
+  w.document.write('<!DOCTYPE html><html dir="rtl"><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}body{font-family:Tajawal,sans-serif;background:#fff;display:flex;align-items:center;justify-content:center;min-height:100vh;padding:20px;}.cert{width:100%;max-width:680px;padding:50px;text-align:center;border:3px solid #f5c842;border-radius:20px;background:linear-gradient(135deg,#fffbeb,#fff);}.icon{font-size:60px;margin-bottom:12px;}.t1{font-size:34px;font-weight:900;color:#f5c842;margin-bottom:4px;}.t2{font-size:15px;color:#94a3b8;font-family:Nunito,sans-serif;margin-bottom:18px;}.div{width:220px;height:2px;background:linear-gradient(90deg,transparent,#f5c842,transparent);margin:0 auto 18px;}.name{font-size:36px;font-weight:900;color:#1e293b;margin-bottom:10px;}.book{font-size:13px;color:#64748b;font-family:Nunito,sans-serif;margin-bottom:18px;line-height:1.8;}.stars{font-size:26px;color:#f5c842;letter-spacing:8px;margin-bottom:18px;}.brand{font-size:14px;font-weight:700;color:#f5c842;}</style></head><body><div class="cert"><div class="icon">🏆</div><div class="t1">شهادة إنجاز</div><div class="t2">Certificate of Achievement</div><div class="div"></div><div class="name">'+name+'</div><div class="book">هيا نبني مدينتنا الجميلة · إصدار المركبات<br>Let\'s Build Our Beautiful City · Vehicle Edition</div><div class="stars">★ ★ ★ ★ ★</div><div class="brand">أثر كيدز | Athar Kids 💛 · © 2026</div></div><script>window.onload=function(){window.print();};<\/script></body></html>');
+  w.document.close();
+  celebrate('🏆','شهادتك جاهزة! · Certificate ready!','Print it and hang it in your room!');
+}
+</script>
+
+
+</body></html>
